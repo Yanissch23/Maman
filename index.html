@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- INFORMATIONS -->
+    <title>Maman</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="design/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-20WJLCZDR2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-20WJLCZDR2');
+    </script>
+    <!-- SOCIALS -->
+    <meta name="og:title" content="Jap'tourisme">
+    <meta name="og:description" content="L'expert des voyages de rêve au pays du soleil levant.">
+    <meta name="og:image" content="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg">
+    <meta name="og:url" content="https://test-believemy.000webhostapp.com/">
+    <meta name="og:site_name" content="Jap'tourisme">
+    <meta name="og:image:alt" content="Japon">
+    <!-- ENCODER -->
+    <meta charset="utf-8">
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        .image-container {
+          position: relative;
+          padding-top: 56.25%; /* 16:9 aspect ratio */
+          margin: 60px auto;
+        }
+  
+        .image-container::before,
+        .image-container::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 50%;
+          background: black;
+          z-index: -1;
+        }
+  
+        .image-container::before {
+          left: 0;
+        }
+  
+        .image-container::after {
+          right: 0;
+        }
+  
+        .image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80vh;
+          object-fit: cover;
+        }
+      </style>
+  </head>
+  <body>
+        <!-- CONTENEUR -->
+        <section id="bienvenue">
+        <!-- EN-TETE -->
+        <div class="conteneur">
+            <header>
+            Joyeux Anniversaire, Maman
+            <span id="slogan">Un Anniversaire en Images</span>
+            </header>
+        </div>
+        </section>
+
+        <section>
+        <h1><span class="mot">Quelques</span> souvenirs</h1>
+        </section>
+
+        <section class="conteneur">
+        <section>
+            <p id="top"></p>
+        </section>
+
+        <div class="image-container">
+          <img class="image" src="./images/33572.JPEG" alt="Image">
+        </div>
+      
+        <script>
+          const imageSources = [
+            './images/33572.JPEG',
+            './images/7.JPEG',
+            './images/3.JPG',
+            './images/1.jpg',
+            './images/6.JPEG',
+            './images/4.JPEG',
+            './images/5.jpg',
+            './images/147.JPG',
+            './images/13-octobre.JPG',
+            './images/963258741.JPEG',
+            './images/789654123.jpg',
+            './images/741852963.jpg',
+            './images/33571.JPEG'
+          ];
+      
+          let currentImageIndex = 0;
+      
+          function changeImage(event) {
+            event.stopPropagation();
+            const image = document.querySelector('.image');
+            image.src = imageSources[currentImageIndex];
+            currentImageIndex = (currentImageIndex + (event.key === 'ArrowRight' ? 1 : -1) + imageSources.length) % imageSources.length;
+          }
+      
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+              changeImage(event);
+            }
+          });
+      
+          const image = document.querySelector('.image');
+          image.addEventListener('click', (event) => {
+            event.stopPropagation();
+            // image click handling (if any)
+          });
+        </script>
+    </body>
+</html>
